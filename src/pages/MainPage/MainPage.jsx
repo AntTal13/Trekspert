@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import SearchHeader from "../../components/SearchHeader/SearchHeader";
 import Weather from "../../components/Weather/Weather";
+import "./MainPage.css";
 
 export default function MainPage() {
   const searchOptions = {
@@ -48,7 +49,7 @@ export default function MainPage() {
 
   return (
     <>
-      <h1>Trekspert</h1>
+      <img className="logo" src="https://i.imgur.com/IwuQ9M6.png" alt=""></img>
       <SearchHeader lastSearch={lastSearch} />
       <SearchBar
         handleChange={handleChange}
