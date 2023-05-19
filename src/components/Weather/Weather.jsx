@@ -7,12 +7,13 @@ export default function Weather({ weather }) {
     return (
     <>
         <div>
-            <h2>Location: {location.name}</h2>
+            <h1>Location: {location.name}</h1>
             <h2>Current Temperature: {current.temp_f}°F</h2>
         </div>
         <div>
-            <h2>{current.condition.text}</h2>
+            <h1>{current.condition.text}</h1>
             <img src={current.condition.icon} alt=""/>
+            <h6>Time: {location.localtime}</h6>
         </div>
     </>
     );
