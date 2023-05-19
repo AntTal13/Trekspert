@@ -7,7 +7,18 @@ const runSchema = new Schema({
     minutes: { type: Number, required: true },
     seconds: { type: Number, required: true },
 }, {
-  timestamps: true
+  timestamps: true,
+  toJSON: { virtuals: true }
 });
+
+runSchema.virtual('totalTime').get(function() {
+    return this.minutes + this.seconds / 60;
+})
+
+runSchema.virtual('pace').get(function() {
+    return this.totalTime / this.distance;
+})
+
+
 
 module.exports = mongoose.model('Run', runSchema);

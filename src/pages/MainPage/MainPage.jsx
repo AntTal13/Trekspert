@@ -13,6 +13,9 @@ export default function MainPage() {
   const [lastSearch, setLastSearch] = useState("");
 
   useEffect(() => {
+    if (searchString === "") {
+      return; 
+    }
     getWeather(searchString);
   }, []);
 
@@ -20,7 +23,12 @@ export default function MainPage() {
     const url = `${searchOptions.api}/current.json?key=${searchOptions.key}&q=${searchString}`;
 
     fetch(url)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Weather data not available');
+        }
+        return res.json();
+      })
       .then((data) => {
         setWeather(data);
         setLastSearch(searchString);
@@ -40,7 +48,7 @@ export default function MainPage() {
 
   return (
     <>
-      <h1>Main Page</h1>
+      <h1>Trekspert</h1>
       <SearchHeader lastSearch={lastSearch} />
       <SearchBar
         handleChange={handleChange}
@@ -48,6 +56,8 @@ export default function MainPage() {
         searchString={searchString}
       />
       <Weather weather={weather} />
+      <h1>Best Pace:</h1>
+      <h2>*PLACEHOLDER*</h2>
     </>
   );
 }
