@@ -18,7 +18,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* Route components in here */}
-              <Route path="/runs" element={<RunsPage />} />
+              <Route path="/runs" element={<RunsPage runs={runs} setRuns={setRuns}/>} />
               <Route path="/" element={<MainPage />} />
             </Routes>
           </>
