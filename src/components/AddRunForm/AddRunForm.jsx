@@ -33,6 +33,7 @@ export default function AddRunForm({ addRun }) {
             selected={newRun.date}
             onChange={(date) => setNewRun({ ...newRun, date })}
             dateFormat="MM/dd/yyyy"
+            placeholderText="Select a date"
           />
           <label> Distance </label>
           <input

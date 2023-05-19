@@ -1,7 +1,7 @@
 export default function RunItems({ run, index }) {
     return (
       <li className="RunItems">
-        <>Date: {run.date}</>
+        <>Date: {run.date.toLocaleDateString()}</>
         <>Distance: {run.distance}</>
         <>Minutes: {run.minutes}</>
         <>Seconds: {run.seconds}</>
