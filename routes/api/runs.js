@@ -3,15 +3,16 @@ const router = express.Router();
 const runsCtrl = require('../../controllers/api/runs');
 
 // GET /runs 
-router.get('/runs', runsCtrl.index);
+router.get('/', runsCtrl.index);
 
 // POST /runs 
-router.post('/runs', runsCtrl.addRun);
-
-// GET /runs/:id
-router.get('/runs/:id', runsCtrl.show);
+router.post('/', runsCtrl.addRun);
 
 // GET /runs/user
-router.get('/runs/user', runsCtrl.forUser);
+router.get('/user', runsCtrl.forUser);
+
+// GET /runs/:id
+router.get('/:id', runsCtrl.show);
+
 
 module.exports = router;

@@ -13,7 +13,6 @@ export default function Weather({ weather }) {
         <div>
             <h1>{current.condition.text}</h1>
             <img src={current.condition.icon} alt=""/>
-            <h6>Time: {location.localtime}</h6>
         </div>
     </>
     );

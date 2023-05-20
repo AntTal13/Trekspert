@@ -20,7 +20,7 @@ async function addRun(req, res) {
     const userId = req.user._id;
 
     const newRun = new Run({
-        user: userId, 
+        user: req.user._id, 
         distance: distance, 
         minutes: minutes, 
         seconds: seconds 

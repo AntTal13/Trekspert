@@ -2,7 +2,7 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function AddRunForm({ addRun }) {
+export default function AddRunForm({ addRun, user }) {
     const [newRun, setNewRun] = useState({
         date: null,
         distance: "",
@@ -13,6 +13,7 @@ export default function AddRunForm({ addRun }) {
     function handleAddRun(evt) {
         evt.preventDefault();
         addRun({
+            user: user._id,
             date: newRun.date,
             distance: parseFloat(evt.target.distance.value),
             minutes: parseInt(evt.target.minutes.value),

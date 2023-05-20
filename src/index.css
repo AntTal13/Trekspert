@@ -50,40 +50,15 @@
 }
 
 @keyframes logo-animation {
-  0% {
-  left: -850px;
-  opacity: 0;
-  animation-timing-function: ease-in;
+  from {
+    left: -850px;
+    opacity: 0;
   }
-  20% {
-  left: -680px;
-  top: 0px;
-  animation-timing-function: ease-in;
+  to {
+    left: 0;
+    opacity: 1;
   }
-  40% {
-  left: -510px;
-  top: -10px;
-  animation-timing-function: ease-out;
-  }
-  60% {
-  left: -340px;
-  top: 0px;
-  animation-timing-function: ease-in;
-  }
-  80% {
-  left: -170px;
-  top: -10px;
-  animation-timing-function: ease-out;
-  }
-  100% {
-  left: 0;
-  top: 0;
-  opacity: 1;
-  animation-timing-function: ease-in;
-  }
-  }
-  
-  
+}
 /* CSS Custom Properties */
 :root {
   --white: #FFFFFF;

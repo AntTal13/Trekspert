@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
+import * as runsAPI from '../../utilities/runs-api';
 import AddRunForm from '../../components/AddRunForm/AddRunForm';
 import RunItems from '../../components/RunItems/RunItems';
-import * as runsAPI from '../../utilities/runs-api';
 import { checkToken } from '../../utilities/users-service';
 
-export default function RunsPage({ runs, setRuns }) {
+export default function RunsPage({ user, setUser, runs, setRuns }) {
     const [userRuns, setUserRuns] = useState([]);
     
     useEffect(function() {
@@ -12,8 +12,8 @@ export default function RunsPage({ runs, setRuns }) {
             try {
                 const allUserRuns = await runsAPI.getAllForUser();
                 setUserRuns(allUserRuns);
-            } catch (err) {
-                console.error(err);
+            } catch (error) {
+                console.error(error);
             }
         }
         runsIndex();
@@ -23,19 +23,19 @@ export default function RunsPage({ runs, setRuns }) {
         try {
             const newRun = await runsAPI.addNewRun(run)
             setRuns([...runs, newRun]);
-        } catch (err) {
-            console.error(err)
+        } catch (error) {
+            console.error(error)
         } 
     }
 
     return (
         <>
         <h1>Runs Page</h1>
-        <AddRunForm addRun={addRun}/>
+        <AddRunForm addRun={addRun} user={user} setUser={setUser}/>
         <h1>All Runs</h1>
         <ul className="AllRuns">
             {runs.map((r, idx) => (
-                <RunItems run={r} index={idx} key={idx} />
+                <RunItems user={user} run={r} index={idx} key={idx} />
             ))}
         </ul>
         </>
