@@ -17,7 +17,8 @@ runSchema.virtual('totalTime').get(function() {
 })
 
 runSchema.virtual('pace').get(function() {
-    return this.totalTime / this.distance;
+    const toFixed = (n, fixed) => ~~(Math.pow(10, fixed) * n) / Math.pow(10, fixed);
+    return toFixed((this.totalTime / this.distance),2);
 })
 
 

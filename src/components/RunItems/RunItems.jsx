@@ -7,6 +7,7 @@ export default function RunItems({ run, index }) {
         <>Distance: {run.distance}</>
         <>Minutes: {run.minutes}</>
         <>Seconds: {run.seconds}</>
+        <>Pace: {run.pace} minutes/mile</>
       </li>
     );
 }

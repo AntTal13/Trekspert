@@ -23,10 +23,13 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
         try {
             const newRun = await runsAPI.addNewRun(run)
             setRuns([...runs, newRun]);
+            setUserRuns([...userRuns, newRun])
         } catch (error) {
             console.error(error)
         } 
     }
+
+    const sortedUserRuns = [...userRuns].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return (
         <>
@@ -34,7 +37,7 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
         <AddRunForm addRun={addRun} user={user} setUser={setUser}/>
         <h1>All Runs</h1>
         <ul className="AllRuns">
-            {runs.map((r, idx) => (
+            {sortedUserRuns.map((r, idx) => (
                 <RunItems user={user} run={r} index={idx} key={idx} />
             ))}
         </ul>

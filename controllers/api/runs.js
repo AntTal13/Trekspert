@@ -17,13 +17,15 @@ async function addRun(req, res) {
     const distance = req.body.distance;
     const minutes = req.body.minutes;
     const seconds = req.body.seconds;
-    const userId = req.user._id;
+    const date = req.body.date;
+    const user = req.user._id;
 
     const newRun = new Run({
         user: req.user._id, 
         distance: distance, 
         minutes: minutes, 
-        seconds: seconds 
+        seconds: seconds,
+        date: date,  
     });
     await newRun.save();
 
