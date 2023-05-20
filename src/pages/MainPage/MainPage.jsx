@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import SearchHeader from "../../components/SearchHeader/SearchHeader";
 import Weather from "../../components/Weather/Weather";
 import "./MainPage.css";
 
@@ -49,8 +48,6 @@ export default function MainPage() {
 
   return (
     <>
-      <img className="logo" src="https://i.imgur.com/IwuQ9M6.png" alt=""></img>
-      <SearchHeader lastSearch={lastSearch} />
       <SearchBar
         handleChange={handleChange}
         handleSubmit={handleSubmit}

@@ -1,13 +1,96 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(circle, lightblue, rgb(204, 240, 204));
+  border: 1px solid rgb(204, 240, 204);
+  border-radius: 10px;
+  padding: 2vmin 10vmin 2vmin 10vmin;
+}
+
+.NavBar a {
+  text-decoration: none;
+  color: darkblue;
+  font-size: 5vmin;
+}
+
+.NavBar a:hover {
+  transform: scale(1.5);
+}
+
+.NavBar .User {
+  font-size: 5vmin;
+}
+
+.NavBar .User,
+.NavBar .LogOut {
+  font-weight: bold;
+  color: darkblue;
+}
+
+.NavBar .Home,
+.NavBar .AllRuns {
+  margin-right: 10px;
+}
+
+.NavBar .logo {
+  flex-grow: 1;
+  text-align: center;
+  max-width: 25vmin;
+  max-height: 25vmin;
+  border-radius: 50%;
+  position: relative;
+  left: -850px;
+  top: 0px;
+  opacity: 0;
+}
+
+.logo-animate {
+  animation: logo-animation 1s ease forwards;
+}
+
+@keyframes logo-animation {
+  0% {
+  left: -850px;
+  opacity: 0;
+  animation-timing-function: ease-in;
+  }
+  20% {
+  left: -680px;
+  top: 0px;
+  animation-timing-function: ease-in;
+  }
+  40% {
+  left: -510px;
+  top: -10px;
+  animation-timing-function: ease-out;
+  }
+  60% {
+  left: -340px;
+  top: 0px;
+  animation-timing-function: ease-in;
+  }
+  80% {
+  left: -170px;
+  top: -10px;
+  animation-timing-function: ease-out;
+  }
+  100% {
+  left: 0;
+  top: 0;
+  opacity: 1;
+  animation-timing-function: ease-in;
+  }
+  }
+  
+  
 /* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --orange: darkblue;
+  --text-light: darkblue;
+  --text-dark: darkblue;
+  background: radial-gradient(circle, rgb(204, 240, 204), lightblue);
 }
 
 *, *:before, *:after {
@@ -16,9 +99,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);

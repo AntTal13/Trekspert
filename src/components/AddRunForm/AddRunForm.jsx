@@ -14,9 +14,9 @@ export default function AddRunForm({ addRun }) {
         evt.preventDefault();
         addRun({
             date: newRun.date,
-            distance: evt.target.distance.value,
-            minutes: evt.target.minutes.value,
-            seconds: evt.target.seconds.value,
+            distance: parseFloat(evt.target.distance.value),
+            minutes: parseInt(evt.target.minutes.value),
+            seconds: parseInt(evt.target.seconds.value),
         })
         setNewRun({
             date: null,

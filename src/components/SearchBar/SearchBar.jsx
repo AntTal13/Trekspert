@@ -4,6 +4,8 @@ export default function SearchBar({
     searchString
   }) {
     return (
+    <>
+      <h1>Weather</h1>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Search"
@@ -15,6 +17,7 @@ export default function SearchBar({
         />
         <button type="submit">Search</button>
       </form>
+    </>
     );
 }
   
