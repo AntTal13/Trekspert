@@ -1,0 +1,30 @@
+.RunItemsContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0vmin 40vmin 0vmin 40vmin;
+    border: 4px solid rgb(162, 197, 207);
+    border-radius: 10px;
+    padding: 2vmin;
+    background: radial-gradient(circle, lightblue, rgb(204, 240, 204));
+}
+
+.RunItem {
+    color: darkblue;
+    font-size: 2.5vmin;
+    display: flex;
+    justify-content: space-between;
+    margin: 1vmin 0vmin 1vmin 0vmin;
+    border: 3px solid rgb(115, 155, 167);
+    border-radius: 10px;
+    padding: 2vmin;
+    background-color: white;
+}
+
+.RunId {
+    text-decoration: none;
+}
+
+.RunId :hover {
+    transform: scale(1.1);
+    color: blue;
+}

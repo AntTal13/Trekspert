@@ -36,11 +36,11 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
         <h1>Runs Page</h1>
         <AddRunForm addRun={addRun} user={user} setUser={setUser}/>
         <h1>All Runs</h1>
-        <ul className="AllRuns">
+        <div className="RunItemsContainer">
             {sortedUserRuns.map((r, idx) => (
                 <RunItems user={user} run={r} index={idx} key={idx} />
             ))}
-        </ul>
+        </div>
         </>
     );
 }

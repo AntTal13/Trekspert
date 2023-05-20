@@ -12,6 +12,7 @@ export default function AddRunForm({ addRun, user }) {
     
     function handleAddRun(evt) {
         evt.preventDefault();
+        
         addRun({
             user: user._id,
             date: newRun.date,

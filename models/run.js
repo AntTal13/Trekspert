@@ -13,12 +13,13 @@ const runSchema = new Schema({
 });
 
 runSchema.virtual('totalTime').get(function() {
-    return this.minutes + this.seconds / 60;
+    return (this.minutes * 60) + this.seconds;
 })
 
 runSchema.virtual('pace').get(function() {
-    const toFixed = (n, fixed) => ~~(Math.pow(10, fixed) * n) / Math.pow(10, fixed);
-    return toFixed((this.totalTime / this.distance),2);
+    const minutePace = Math.floor(this.totalTime / this.distance / 60);
+    const secondPace = Math.floor(this.totalTime / this.distance % 60);
+    return `${minutePace}:${secondPace}`
 })
 
 
