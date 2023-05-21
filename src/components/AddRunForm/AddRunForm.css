@@ -6,8 +6,8 @@
     margin: 0 auto;
     margin-top: -5vmin;
     padding: 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(195, 195, 195);
     border-radius: 5px;
 }
   
@@ -21,17 +21,16 @@
 .AddRunForm button {
     padding: 10px;
     margin-bottom: 10px;
-    /* width: 100%; */
     box-sizing: border-box;
 }
   
 .AddRunForm button {
-    background-color: #4caf50;
+    background-color:rgb(21, 187, 32);
     color: white;
     border: none;
 }
-  
+
 .AddRunForm button:hover {
-    background-color: #45a049;
+    background-color:rgb(6, 124, 16);
 }
   
