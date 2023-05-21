@@ -1,6 +1,6 @@
 export default function Weather({ weather }) {
     if (!weather.current) {
-        return <h2>How does it look outside?</h2>
+        return
     }
     const { location, current } = weather;
     //console.log(weather)

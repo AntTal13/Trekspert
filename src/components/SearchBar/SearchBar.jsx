@@ -8,7 +8,7 @@ export default function SearchBar({
       <h1 className="weatherHeader">Weather</h1>
       <form onSubmit={handleSubmit}>
         <input
-          placeholder="Search"
+          placeholder="CHECK THE WEATHER"
           type="text"
           name="searchString"
           required

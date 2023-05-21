@@ -42,21 +42,21 @@ export default function AddRunForm({ addRun, user }) {
           <input
             name="distance"
             value={newRun.distance}
-            placeholder="MILES"
+            placeholder="Miles"
             onChange={(evt) => setNewRun({ ...newRun, distance: evt.target.value })}
           />
           <label> Minutes </label>
           <input
             name="minutes"
             value={newRun.minutes}
-            placeholder="MINUTES"
+            placeholder="Minutes"
             onChange={(evt) => setNewRun({ ...newRun, minutes: evt.target.value })}
           />
           <label> Seconds </label>
           <input
             name="seconds"
             value={newRun.seconds}
-            placeholder="SECONDS"
+            placeholder="Seconds"
             onChange={(evt) => setNewRun({ ...newRun, seconds: evt.target.value })}
           />
           <button type="submit"> ADD RUN </button>

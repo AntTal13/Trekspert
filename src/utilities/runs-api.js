@@ -12,3 +12,7 @@ export function addNewRun(run) {
 export function getAllForUser() {
     return sendRequest(`${BASE_URL}/user`);
 }
+
+export function getRunId(runId) {
+    return sendRequest(`${BASE_URL}/${runId}`);
+}

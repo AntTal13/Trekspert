@@ -38,8 +38,8 @@ async function addRun(req, res) {
 }
 
 async function show(req, res) {
-    const runs = await Run.findById(req.params.id);
-    res.json(runs);
+    const run = await Run.findById(req.params.id).populate('user');
+    res.json(run);
 }
 
 async function forUser(req, res) {

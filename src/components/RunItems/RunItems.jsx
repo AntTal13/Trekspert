@@ -10,7 +10,7 @@ export default function RunItems({ run, index }) {
     const newPace = `${minutePace}:${secondPace.toString().padStart(2, '0')}`;
   
     return (
-      <Link className='RunId' to="">
+      <Link className='RunId' to={`/runs/${run._id}`}>
       <div className="RunItem">
         <div>Date: {newDate}</div>
         <div>Distance: {run.distance}</div>

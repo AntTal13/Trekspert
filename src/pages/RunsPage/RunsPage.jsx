@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import * as runsAPI from '../../utilities/runs-api';
 import AddRunForm from '../../components/AddRunForm/AddRunForm';
 import RunItems from '../../components/RunItems/RunItems';
+import RunDetail from '../../components/RunDetail/RunDetail';
 import { checkToken } from '../../utilities/users-service';
 import "./RunsPage.css";
 
 export default function RunsPage({ user, setUser, runs, setRuns }) {
     const [userRuns, setUserRuns] = useState([]);
-    
+    const { runId } = useParams();
+
     useEffect(function() {
         async function runsIndex() {
             try {
@@ -43,9 +46,12 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
                 <h1 className="allRunsHeader">All Runs</h1>
                 <div className="RunItemsContainer">
                     {sortedUserRuns.map((r, idx) => (
+                        <Link className="none" to={`/runs/${r._id}`} key={idx}>
                         <RunItems user={user} run={r} index={idx} key={idx} />
+                        </Link>
                     ))}
                 </div>
+                {runId && <RunDetail />}
             </div>
         </div>
         </>

@@ -1,6 +1,6 @@
 .RunItemsContainer {
     max-width: 110vmin;
-    margin: -5vmin 10vmin 10vmin 10vmin
+    margin: -5vmin 10vmin 10vmin 10vmin;
 }
 
 .runspage {
@@ -29,4 +29,8 @@
     background: linear-gradient(blue, green);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.none {
+    text-decoration: none;
 }
