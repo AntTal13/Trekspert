@@ -6,8 +6,9 @@ export default function SearchBar({
     return (
     <>
       <h1 className="weatherHeader">Weather</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="search" onSubmit={handleSubmit}>
         <input
+          className="searchBar"
           placeholder="CHECK THE WEATHER"
           type="text"
           name="searchString"
@@ -15,7 +16,7 @@ export default function SearchBar({
           onChange={handleChange}
           value={searchString}
         />
-        <button type="submit">Search</button>
+        <button className="searchButton" type="submit">Search</button>
       </form>
     </>
     );
