@@ -34,3 +34,8 @@
 .none {
     text-decoration: none;
 }
+
+.none :hover {
+    transform: scale(1.1);
+    color: blue;
+}

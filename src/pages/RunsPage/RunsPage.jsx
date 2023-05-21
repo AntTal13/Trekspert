@@ -46,12 +46,12 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
                 <h1 className="allRunsHeader">All Runs</h1>
                 <div className="RunItemsContainer">
                     {sortedUserRuns.map((r, idx) => (
-                        <Link className="none" to={`/runs/${r._id}`} key={idx}>
-                        <RunItems user={user} run={r} index={idx} key={idx} />
+                        <Link className="none" to={`/runs/${r._id}`} key={r._id}>
+                        <RunItems user={user} run={r} index={idx} key={r._id} />
                         </Link>
                     ))}
                 </div>
-                {runId && <RunDetail />}
+                {runId && <RunDetail runId={runId}/>}
             </div>
         </div>
         </>

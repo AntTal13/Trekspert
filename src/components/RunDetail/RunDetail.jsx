@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import * as runsAPI from '../../utilities/runs-api';
-import { useParams } from 'react-router-dom';
 
-export default function RunDetail() {
+export default function RunDetail({ runId }) {
     const [run, setRun] = useState(null);
-    const { runId } = useParams();
 
     useEffect(() => {
         async function runDetails() {
@@ -20,7 +18,7 @@ export default function RunDetail() {
 
     return (
         <div className="RunItemDetail">
-            <div>{run.date}</div>
+            <h1>Detail</h1>
         </div>
     )
 }
