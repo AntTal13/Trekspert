@@ -3,6 +3,7 @@ import * as runsAPI from '../../utilities/runs-api';
 import AddRunForm from '../../components/AddRunForm/AddRunForm';
 import RunItems from '../../components/RunItems/RunItems';
 import { checkToken } from '../../utilities/users-service';
+import "./RunsPage.css";
 
 export default function RunsPage({ user, setUser, runs, setRuns }) {
     const [userRuns, setUserRuns] = useState([]);
@@ -33,13 +34,19 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
 
     return (
         <>
-        <h1>Runs Page</h1>
-        <AddRunForm addRun={addRun} user={user} setUser={setUser}/>
-        <h1>All Runs</h1>
-        <div className="RunItemsContainer">
-            {sortedUserRuns.map((r, idx) => (
-                <RunItems user={user} run={r} index={idx} key={idx} />
-            ))}
+        <div className="runspage">
+            <div>
+                <h1 className="addRunHeader">Add a Run</h1>
+                <AddRunForm addRun={addRun} user={user} setUser={setUser}/>
+            </div>
+            <div>
+                <h1 className="allRunsHeader">All Runs</h1>
+                <div className="RunItemsContainer">
+                    {sortedUserRuns.map((r, idx) => (
+                        <RunItems user={user} run={r} index={idx} key={idx} />
+                    ))}
+                </div>
+            </div>
         </div>
         </>
     );

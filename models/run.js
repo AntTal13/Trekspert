@@ -19,7 +19,7 @@ runSchema.virtual('totalTime').get(function() {
 runSchema.virtual('pace').get(function() {
     const minutePace = Math.floor(this.totalTime / this.distance / 60);
     const secondPace = Math.floor(this.totalTime / this.distance % 60);
-    return `${minutePace}:${secondPace}`
+    return `${minutePace}:${secondPace.toString().padStart(2, '0')}`;
 })
 
 

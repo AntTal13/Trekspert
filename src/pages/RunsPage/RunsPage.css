@@ -1,0 +1,32 @@
+.RunItemsContainer {
+    max-width: 110vmin;
+    margin: -5vmin 10vmin 10vmin 10vmin
+}
+
+.runspage {
+    padding: 5vmin;
+    display: flex;
+    flex-direction: row;
+}
+
+.Runs {
+    display: flex;
+}
+
+.addRunHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 7vmin;
+    background: linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.allRunsHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 7vmin;
+    background: linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,37 @@
+.AddRunForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30vmin;
+    margin: 0 auto;
+    margin-top: -5vmin;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.AddRunForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 3vmin;
+}
+  
+.AddRunForm input,
+.AddRunForm button {
+    padding: 10px;
+    margin-bottom: 10px;
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+  
+.AddRunForm button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+  
+.AddRunForm button:hover {
+    background-color: #45a049;
+}
+  
