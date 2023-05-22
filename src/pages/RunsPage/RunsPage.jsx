@@ -36,22 +36,26 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
 
     return (
         <>
-        <div className="runspage">
-            <div>
-                <h1 className="addRunHeader">Add a Run</h1>
-                <AddRunForm addRun={addRun} user={user} setUser={setUser}/>
-            </div>
-            <div>
-                <h1 className="allRunsHeader">All Runs</h1>
-                <div className="RunItemsContainer">
-                    {sortedUserRuns.map((r, idx) => (
-                        <Link className="none" to={`/runs/${r._id}`} key={r._id}>
-                        <RunItems user={user} run={r} index={idx} key={r._id} />
-                        </Link>
-                    ))}
+            <div className="runspage">
+                <div>
+                    <h1 className="addRunHeader">Add a Run</h1>
+                    <AddRunForm addRun={addRun} user={user} setUser={setUser} />
+                </div>
+                <div>
+                    <h1 className="allRunsHeader">All Runs</h1>
+                    <div className="RunItemsContainer">
+                        {sortedUserRuns.length > 0 ? (
+                            sortedUserRuns.map((r, idx) => (
+                                <Link className="none" to={`/runs/${r._id}`} key={r._id}>
+                                    <RunItems user={user} run={r} index={idx} key={r._id} />
+                                </Link>
+                            ))
+                        ) : (
+                            <h1 className='noRuns'>No Runs Yet!</h1>
+                        )}
+                    </div>
                 </div>
             </div>
-        </div>
         </>
     );
 }

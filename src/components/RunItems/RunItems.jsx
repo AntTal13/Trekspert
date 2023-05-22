@@ -12,7 +12,7 @@ export default function RunItems({ run, index }) {
     return (
       <div className="RunItem">
         <div>Date: {newDate}</div>
-        <div>Distance: {run.distance}</div>
+        <div>Distance: {run.distance} mile(s)</div>
         <div>Minutes: {run.minutes}</div>
         <div>Seconds: {newSeconds}</div>
         <div>Pace: {newPace} minutes/mile</div>

@@ -7,7 +7,7 @@ export default function RunDetail() {
     const [run, setRun] = useState(null);
     const { id } = useParams();
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         async function runDetails() {
             try {
@@ -44,7 +44,7 @@ export default function RunDetail() {
             </div>
             <div className="RunDetail">
                 <div>Date: {newDate}</div>
-                <div>Distance: {run.distance}</div>
+                <div>Distance: {run.distance} mile(s)</div>
                 <div>Minutes: {run.minutes}</div>
                 <div>Seconds: {newSeconds}</div>
                 <div>Pace: {newPace} minutes/mile</div>

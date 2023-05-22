@@ -39,3 +39,10 @@
     transform: scale(1.1);
     color: blue;
 }
+
+.noRuns {
+    font-size: 8vmin;
+    background: linear-gradient(darkorange, maroon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
