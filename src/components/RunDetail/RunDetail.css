@@ -28,6 +28,10 @@
     padding: 2vmin;
     font-size: 3vmin;
     margin-top: 3vmin;
+    margin-right: 3vmin;
+    color: darkblue;
+    border: 2px solid darkblue;
+    background: linear-gradient(rgb(103, 177, 224), rgb(78, 186, 51));
 }
 
 .Delete {
@@ -36,4 +40,20 @@
     padding: 2vmin;
     font-size: 3vmin;
     margin-top: 3vmin;
+    margin-left: 3vmin;
+    color: darkblue;
+    border: 2px solid darkblue;
+    background: linear-gradient(rgb(103, 177, 224), rgb(78, 186, 51));
+}
+
+.Edit:hover {
+    color: white;
+    background: linear-gradient(rgb(34, 102, 145), rgb(36, 108, 18));
+    transform: scale(1.2);
+}
+
+.Delete:hover {
+    color: white;
+    background: linear-gradient(rgb(34, 102, 145), rgb(36, 108, 18));
+    transform: scale(1.2);
 }

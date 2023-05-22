@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import * as runsAPI from '../../utilities/runs-api';
 import './RunDetail.css'
 
 export default function RunDetail() {
     const [run, setRun] = useState(null);
     const { id } = useParams();
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
         async function runDetails() {
             try {
@@ -18,6 +19,15 @@ export default function RunDetail() {
         }
         runDetails()
     }, [])
+
+    async function handleDelete() {
+        try {
+            await runsAPI.deleteRun(id);
+            navigate('/runs');
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     if (run) {
         const newDate = new Date(run.date).toLocaleDateString();
@@ -40,7 +50,7 @@ export default function RunDetail() {
                 <div>Pace: {newPace} minutes/mile</div>
             </div>
             <button className="Edit">EDIT</button>
-            <button className="Delete">DELETE</button>
+            <button className="Delete" onClick={handleDelete}>DELETE</button>
             </>
         )
         }

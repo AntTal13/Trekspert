@@ -16,3 +16,7 @@ export function getAllForUser() {
 export function getRunId(runId) {
     return sendRequest(`${BASE_URL}/${runId}`);
 }
+
+export function deleteRun(runId) {
+    return sendRequest(`${BASE_URL}/${runId}`, 'DELETE');
+}

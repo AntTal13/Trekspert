@@ -4,7 +4,8 @@ module.exports = {
     index,
     addRun,
     show,
-    forUser
+    forUser,
+    delete: deleteRun
 };
 
 async function index(req, res) {
@@ -46,4 +47,10 @@ async function forUser(req, res) {
     // get runs for the logged in user
     const userRuns = await Run.find({user: req.user._id});
     res.json(userRuns);
+}
+
+async function deleteRun(req, res) {
+    const run = await Run.findById(req.params.id);
+    await Run.deleteOne(run);
+    res.json(run);
 }

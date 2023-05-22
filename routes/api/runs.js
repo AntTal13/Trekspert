@@ -14,5 +14,8 @@ router.get('/user', runsCtrl.forUser);
 // GET /runs/:id
 router.get('/:id', runsCtrl.show);
 
+// DELETE /runs/:id
+router.delete('/:id', runsCtrl.delete);
+
 
 module.exports = router;
