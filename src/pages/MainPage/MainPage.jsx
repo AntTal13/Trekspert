@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import BestPace from "../../components/BestPace/BestPace";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Weather from "../../components/Weather/Weather";
 import "./MainPage.css";
@@ -48,14 +49,15 @@ export default function MainPage() {
 
   return (
     <>
+    <div className="mainPage">
       <SearchBar
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
       <Weather weather={weather} />
-      <h1>Best Pace:</h1>
-      <h2>*PLACEHOLDER*</h2>
+      <BestPace />
+    </div>
     </>
   );
 }
