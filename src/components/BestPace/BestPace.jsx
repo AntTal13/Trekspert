@@ -28,10 +28,12 @@ export default function BestPace() {
         //similar to virtuals in model
         const aTotalTime = (aMinutes * 60) + aSeconds;
         const bTotalTime = (bMinutes * 60) + bSeconds;
-      
+        
+        //return ascending order
         return aTotalTime - bTotalTime;
       });
       
+      //grab first in ordered runs by pace
       const bestRun = bestRunByPace[0];
 
     if (!bestRun) {
