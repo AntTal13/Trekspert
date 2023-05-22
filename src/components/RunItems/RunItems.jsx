@@ -15,7 +15,7 @@ export default function RunItems({ run, index }) {
         <div>Distance: {run.distance} mile(s)</div>
         <div>Minutes: {run.minutes}</div>
         <div>Seconds: {newSeconds}</div>
-        <div>Pace: {newPace} minutes/mile</div>
+        <div>Pace: {newPace} / mile</div>
       </div>
     );
   }

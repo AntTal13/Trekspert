@@ -47,7 +47,7 @@ export default function RunDetail() {
                 <div>Distance: {run.distance} mile(s)</div>
                 <div>Minutes: {run.minutes}</div>
                 <div>Seconds: {newSeconds}</div>
-                <div>Pace: {newPace} minutes/mile</div>
+                <div>Pace: {newPace} / mile</div>
             </div>
             <button className="Edit">EDIT</button>
             <button className="Delete" onClick={handleDelete}>DELETE</button>
