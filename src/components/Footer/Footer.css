@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+    max-width: 20vmin;
+    max-height: 3vmin;
+    background-color: rgb(227, 227, 227);
+    border-radius: 10px;
+    float: right;
+    margin-bottom: 3vmin;
+}
+
+.linkedIn {
+    text-decoration: none;
+    font-size: 2.5vmin;
+    color: darkblue;
+}
