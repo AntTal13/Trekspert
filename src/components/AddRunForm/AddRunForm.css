@@ -34,3 +34,6 @@
     background-color:rgb(6, 124, 16);
 }
   
+.addRunButton:hover {
+    transform: scale(1.1);
+}

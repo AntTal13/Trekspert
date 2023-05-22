@@ -59,7 +59,7 @@ export default function AddRunForm({ addRun, user }) {
             placeholder="Seconds"
             onChange={(evt) => setNewRun({ ...newRun, seconds: evt.target.value })}
           />
-          <button type="submit"> ADD RUN </button>
+          <button className="addRunButton" type="submit"> ADD RUN </button>
         </form>
     );
 }

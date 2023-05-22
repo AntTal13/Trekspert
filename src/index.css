@@ -17,6 +17,10 @@
   margin-top: -4vmin;
 }
 
+.searchButton:hover{
+  transform: scale(1.2);
+}
+
 .weatherHeader {
   display: flex;
   justify-content: center;
