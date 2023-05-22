@@ -3,9 +3,11 @@
     max-width: 20vmin;
     max-height: 3vmin;
     background-color: rgb(227, 227, 227);
+    opacity: 80%;
     border-radius: 10px;
     float: right;
     margin-bottom: 3vmin;
+    margin-top: 5vmin;
 }
 
 .linkedIn {

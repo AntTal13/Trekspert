@@ -7,7 +7,6 @@ import MainPage from '../MainPage/MainPage';
 import RunsPage from '../RunsPage/RunsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import RunDetail from '../../components/RunDetail/RunDetail';
-import Footer from '../../components/Footer/Footer';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -24,7 +23,6 @@ export default function App() {
               <Route path="/" element={<MainPage />} />
               <Route path="/runs/:id" element={<RunDetail />} />
             </Routes>
-            <Footer />
           </>
           :
           <AuthPage setUser={setUser} />

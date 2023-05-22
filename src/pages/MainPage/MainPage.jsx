@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BestPace from "../../components/BestPace/BestPace";
+import Footer from "../../components/Footer/Footer";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Weather from "../../components/Weather/Weather";
 import "./MainPage.css";
@@ -57,6 +58,7 @@ export default function MainPage() {
       />
       <Weather weather={weather} />
       <BestPace />
+      <Footer />
     </div>
     </>
   );
