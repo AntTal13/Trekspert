@@ -17,8 +17,22 @@ export default function BestPace() {
       runsIndex();
     }, []);
     
-    const bestRunByPace = [...userRuns].sort((a, b) => a.pace.localeCompare(b.pace))
-    const bestRun = bestRunByPace[0]
+    const bestRunByPace = [...userRuns].sort((a, b) => {
+        //split string at ":" and assign to an array that holds minutes and seconds
+        //as we map, convert those strings to numbers so we can calculate similarly
+        //to how we did in the model
+        //on the return I will need a way to sort in ascending order 
+        const [aMinutes, aSeconds] = a.pace.split(':').map(Number);
+        const [bMinutes, bSeconds] = b.pace.split(':').map(Number);
+      
+        //similar to virtuals in model
+        const aTotalTime = (aMinutes * 60) + aSeconds;
+        const bTotalTime = (bMinutes * 60) + bSeconds;
+      
+        return aTotalTime - bTotalTime;
+      });
+      
+      const bestRun = bestRunByPace[0];
 
     if (!bestRun) {
     return (
