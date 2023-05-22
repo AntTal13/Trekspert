@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as runsAPI from '../../utilities/runs-api';
 import AddRunForm from '../../components/AddRunForm/AddRunForm';
 import RunItems from '../../components/RunItems/RunItems';
@@ -9,7 +9,6 @@ import "./RunsPage.css";
 
 export default function RunsPage({ user, setUser, runs, setRuns }) {
     const [userRuns, setUserRuns] = useState([]);
-    const { runId } = useParams();
 
     useEffect(function() {
         async function runsIndex() {
@@ -51,7 +50,6 @@ export default function RunsPage({ user, setUser, runs, setRuns }) {
                         </Link>
                     ))}
                 </div>
-                {runId && <RunDetail runId={runId}/>}
             </div>
         </div>
         </>

@@ -1,0 +1,39 @@
+.RunDetailHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 5vmin;
+    background: linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: -3vmin;
+}
+
+.RunDetail {
+    font-size: 4vmin;
+    color: darkblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40vmin;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: radial-gradient(circle, lightblue, rgb(204, 240, 204));
+    border: 1px solid rgb(27, 69, 174);
+    padding: 2vmin;
+}
+
+.Edit {
+    width: 100%;
+    max-width: 13vmin;
+    padding: 2vmin;
+    font-size: 3vmin;
+    margin-top: 3vmin;
+}
+
+.Delete {
+    width: 100%;
+    max-width: 17vmin;
+    padding: 2vmin;
+    font-size: 3vmin;
+    margin-top: 3vmin;
+}
