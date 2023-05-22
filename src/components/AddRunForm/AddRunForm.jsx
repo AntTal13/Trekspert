@@ -11,6 +11,10 @@ export default function AddRunForm({ addRun, user }) {
         seconds: "",
     });
     
+    //Guard to check if all fields are entered for form (BELOW)
+    //Otherwise server crashes
+    const isFormValid = newRun.date && newRun.distance && newRun.minutes && newRun.seconds;
+
     function handleAddRun(evt) {
         evt.preventDefault();
         
@@ -59,7 +63,7 @@ export default function AddRunForm({ addRun, user }) {
             placeholder="Seconds"
             onChange={(evt) => setNewRun({ ...newRun, seconds: evt.target.value })}
           />
-          <button className="addRunButton" type="submit"> ADD RUN </button>
+          <button className="addRunButton" type="submit" disabled={!isFormValid}> ADD RUN </button>
         </form>
     );
 }
