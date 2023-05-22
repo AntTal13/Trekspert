@@ -20,18 +20,7 @@ export default function BestPace() {
     const bestRunByPace = [...userRuns].sort((a, b) => a.pace.localeCompare(b.pace))
     const bestRun = bestRunByPace[0]
 
-    if (bestRun) {
-    return (
-        <>
-        <div className="paceDiv">
-        <h1 className="bestPaceHeader">Best Pace:</h1>
-        <h2 className="bestPace">{bestRun.pace} /mile</h2>
-        </div>
-        </>
-    )
-}
-
-if (!bestRun) {
+    if (!bestRun) {
     return (
         <>
         <div className="paceDiv">
@@ -41,4 +30,15 @@ if (!bestRun) {
         </>
     )
     }
+    if (bestRun) {
+    return (
+        <>
+        <div className="paceDiv">
+        <h1 className="bestPaceHeader">Best Pace:</h1>
+        <h2 className="bestPace">{bestRun.pace} /mile</h2>
+        </div>
+        </>
+    )
+    }
+
     }
