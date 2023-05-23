@@ -23,7 +23,7 @@ export default function App() {
               <Route path="/runs" element={<RunsPage user={user} setUser={setUser} runs={runs} setRuns={setRuns}/>} />
               <Route path="/" element={<MainPage />} />
               <Route path="/runs/:id" element={<RunDetail />} />
-              <Route path="/runs/:id/edit" element={<EditRunForm />} />
+              <Route path="/runs/:id/edit" element={<EditRunForm user={user} runs={runs} />} />
             </Routes>
           </>
           :
