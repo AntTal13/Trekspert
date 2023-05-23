@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import DatePicker from "react-datepicker";
+import * as runsAPI from '../../utilities/runs-api';
 import "react-datepicker/dist/react-datepicker.css";
 import "./EditRunForm.css";
 
-export default function EditRunForm({ runs, user }) {
+export default function EditRunForm({ runs }) {
+    const navigate = useNavigate();
     const { id } = useParams();
     const [updatedRun, setUpdatedRun] = useState({
         date: null,
@@ -18,31 +20,23 @@ export default function EditRunForm({ runs, user }) {
         if (currentRun) {
             setUpdatedRun(currentRun)
         }
-    }, [])
+    }, [runs, id])
     
     //Guard to check if all fields are entered for form (BELOW)
     //Otherwise server crashes
     const isFormValid = updatedRun.date && updatedRun.distance && updatedRun.minutes && updatedRun.seconds;
     
-    function handleUpdatedRun(evt) {
+    async function handleUpdatedRun(evt) {
         evt.preventDefault();
-        
+
         const newRunDetails = {
-            user: user._id,
             date: updatedRun.date,
             distance: parseFloat(evt.target.distance.value),
             minutes: parseInt(evt.target.minutes.value),
             seconds: parseInt(evt.target.seconds.value),
         }
 
-        const updatedRuns = runs.map(run => {
-            if (run.id === updatedRun.id) {
-              return newRunDetails;
-            }
-            return run;
-        });
-        
-        setUpdatedRun(updatedRuns);
+        await runsAPI.updateRun(id, newRunDetails)
         
         setUpdatedRun({
             date: null,
@@ -50,6 +44,9 @@ export default function EditRunForm({ runs, user }) {
             minutes: "",
             seconds: "",
         })
+
+        navigate(`/runs/${id}`);
+        
         }
 
     return (
