@@ -20,7 +20,7 @@ export default function AddRunForm({ addRun, user }) {
         
         addRun({
             user: user._id,
-            date: newRun.date,
+            date: newRun.date.toISOString(),
             distance: parseFloat(evt.target.distance.value),
             minutes: parseInt(evt.target.minutes.value),
             seconds: parseInt(evt.target.seconds.value),

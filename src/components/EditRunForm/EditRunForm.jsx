@@ -9,12 +9,12 @@ export default function EditRunForm({ runs }) {
     const navigate = useNavigate();
     const { id } = useParams();
     const [updatedRun, setUpdatedRun] = useState({
-        date: null,
+        date: "",
         distance: "",
         minutes: "",
         seconds: "",
     });
-
+    
     useEffect(() => {
         const currentRun = runs.find(run => run.id === id)
         if (currentRun) {
@@ -28,18 +28,18 @@ export default function EditRunForm({ runs }) {
     
     async function handleUpdatedRun(evt) {
         evt.preventDefault();
-
+        
         const newRunDetails = {
-            date: updatedRun.date,
+            date: new Date(updatedRun.date),
             distance: parseFloat(evt.target.distance.value),
             minutes: parseInt(evt.target.minutes.value),
             seconds: parseInt(evt.target.seconds.value),
         }
-
+        
         await runsAPI.updateRun(id, newRunDetails)
         
         setUpdatedRun({
-            date: null,
+            date: "",
             distance: "",
             minutes: "",
             seconds: "",
@@ -55,7 +55,7 @@ export default function EditRunForm({ runs }) {
         <form className="UpdateRunForm" onSubmit={handleUpdatedRun}>
           <label> Date </label>
           <DatePicker
-            selected={updatedRun.date}
+            selected={updatedRun.date ? new Date(updatedRun.date) : null}
             onChange={(date) => setUpdatedRun({ ...updatedRun, date })}
             dateFormat="MM/dd/yyyy"
             placeholderText="Select a date"
