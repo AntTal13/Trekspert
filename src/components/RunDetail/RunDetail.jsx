@@ -29,6 +29,10 @@ export default function RunDetail() {
         }
     }
 
+    function handleEdit() {
+        navigate(`/runs/${id}/edit`)
+    }
+
     if (run) {
         const newDate = new Date(run.date).toLocaleDateString();
         const newSeconds = run.seconds.toString().padStart(2, '0');
@@ -49,7 +53,7 @@ export default function RunDetail() {
                 <div>Seconds: {newSeconds}</div>
                 <div>Pace: {newPace} / mile</div>
             </div>
-            <button className="Edit">EDIT</button>
+            <button className="Edit" onClick={handleEdit}>EDIT</button>
             <button className="Delete" onClick={handleDelete}>DELETE</button>
             </>
         )

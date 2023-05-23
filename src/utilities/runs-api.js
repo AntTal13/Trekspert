@@ -20,3 +20,7 @@ export function getRunId(runId) {
 export function deleteRun(runId) {
     return sendRequest(`${BASE_URL}/${runId}`, 'DELETE');
 }
+
+export function updateRun(runId, updatedRun) {
+    return sendRequest(`${BASE_URL}/${runId}`, 'PUT', updatedRun);
+}

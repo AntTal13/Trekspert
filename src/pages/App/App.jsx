@@ -7,6 +7,7 @@ import MainPage from '../MainPage/MainPage';
 import RunsPage from '../RunsPage/RunsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import RunDetail from '../../components/RunDetail/RunDetail';
+import EditRunForm from '../../components/EditRunForm/EditRunForm';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -22,6 +23,7 @@ export default function App() {
               <Route path="/runs" element={<RunsPage user={user} setUser={setUser} runs={runs} setRuns={setRuns}/>} />
               <Route path="/" element={<MainPage />} />
               <Route path="/runs/:id" element={<RunDetail />} />
+              <Route path="/runs/:id/edit" element={<EditRunForm />} />
             </Routes>
           </>
           :

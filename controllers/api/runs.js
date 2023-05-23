@@ -5,7 +5,9 @@ module.exports = {
     addRun,
     show,
     forUser,
-    delete: deleteRun
+    delete: deleteRun,
+    edit,
+    update
 };
 
 async function index(req, res) {
@@ -53,4 +55,15 @@ async function deleteRun(req, res) {
     const run = await Run.findById(req.params.id);
     await Run.deleteOne(run);
     res.json(run);
+}
+
+async function edit(req, res) {
+    const run = await Run.findById(req.params.id);
+    res.json({ title: 'Edit Run', run})
+}
+
+async function update(req, res) {
+    const run = await Run.findById(req.params.id);
+    await Run.updateOne(run, req.body)
+    res.json(run)
 }
