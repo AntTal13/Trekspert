@@ -1,0 +1,14 @@
+.authHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 10vmin;
+    background: linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.logo {
+    max-width: 25vmin;
+    max-height: 25vmin;
+    border-radius: 50%;
+}
