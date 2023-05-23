@@ -1,0 +1,52 @@
+.editHeader{
+    display: flex;
+    justify-content: center;
+    font-size: 10vmin;
+    background: linear-gradient(darkorange, maroon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4vmin;
+    margin-top: 10vmin;
+}
+
+.UpdateRunForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 175vmin;
+    margin: 0 auto;
+    margin-top: 3vmin;
+    padding: 4vmin;
+    border-radius: 10px;
+    background: radial-gradient(circle, lightblue, rgb(204, 240, 204));
+    border: 1px solid rgb(177, 212, 177);
+}
+  
+.UpdateRunForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 3vmin;
+}
+  
+.UpdateRunForm input,
+.UpdateRunForm button {
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+  
+.UpdateRunForm button {
+    background: linear-gradient(maroon, darkorange);
+    color: white;
+    width: 100%;
+    max-width: 17vmin;
+    border: none;
+    margin-bottom: 1vmin;
+}
+
+.UpdateRunForm button:hover {
+    background: linear-gradient(darkorange, maroon);
+    transform: scale(1.1);
+}
+  

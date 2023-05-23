@@ -46,10 +46,12 @@ export default function EditRunForm({ runs }) {
         })
 
         navigate(`/runs/${id}`);
-        
+
         }
 
     return (
+        <>
+        <h1 className="editHeader">Edit Run</h1>
         <form className="UpdateRunForm" onSubmit={handleUpdatedRun}>
           <label> Date </label>
           <DatePicker
@@ -57,29 +59,30 @@ export default function EditRunForm({ runs }) {
             onChange={(date) => setUpdatedRun({ ...updatedRun, date })}
             dateFormat="MM/dd/yyyy"
             placeholderText="Select a date"
-          />
+            />
           <label> Distance </label>
           <input
             name="distance"
             value={updatedRun.distance}
             placeholder="Miles"
             onChange={(evt) => setUpdatedRun({ ...updatedRun, distance: evt.target.value })}
-          />
+            />
           <label> Minutes </label>
           <input
             name="minutes"
             value={updatedRun.minutes}
             placeholder="Minutes"
             onChange={(evt) => setUpdatedRun({ ...updatedRun, minutes: evt.target.value })}
-          />
+            />
           <label> Seconds </label>
           <input
             name="seconds"
             value={updatedRun.seconds}
             placeholder="Seconds"
             onChange={(evt) => setUpdatedRun({ ...updatedRun, seconds: evt.target.value })}
-          />
+            />
           <button className="updateRunButton" type="submit" disabled={!isFormValid}> UPDATE RUN </button>
         </form>
+        </>
     );
 }
