@@ -19,3 +19,25 @@
 .footer:hover {
     transform: scale(1.1);
 }
+
+.Timer {
+    width: 100%;
+    max-width: 20vmin;
+    max-height: 3vmin;
+    background-color: rgb(227, 227, 227);
+    opacity: 80%;
+    border-radius: 10px;
+    float: left;
+    margin-bottom: 3vmin;
+    margin-top: 5vmin;
+}
+
+.TimerFooter {
+    text-decoration: none;
+    font-size: 2.5vmin;
+    color: darkblue;
+}
+
+.Timer:hover {
+    transform: scale(1.1);
+}

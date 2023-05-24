@@ -1,0 +1,36 @@
+.myTimer {
+    color: maroon;
+    font-size: 20vmin;
+    max-width: 100%;
+    width: 75vmin;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: -2vmin;
+    border: 4px solid rgb(162, 197, 207);
+    border-radius: 10px;
+    padding: 2vmin;
+    background: radial-gradient(circle, lightblue, rgb(204, 240, 204))
+}
+
+.TimerHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 8vmin;
+    background: linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.TimerSpace {
+    padding: 5vmin;
+}
+
+.timerbutton {
+    color: white;
+    background: linear-gradient(rgb(89, 158, 200), rgb(9, 45, 0));
+}
+
+.timerbutton:hover {
+    transform: scale(1.05);
+}

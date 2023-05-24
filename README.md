@@ -37,7 +37,9 @@ Welcome to Trekspert!
 3. Add runs and track your progress
     * Made a mistake? No sweat, you can edit and delete runs as you go
 4. Track your past runs
-5. Finally, we hope you enjoy the app!
+5. If needed, a timer has been provided for your workouts!
+    * You can access it at the bottom of the home page
+6. Finally, we hope you enjoy the app!
 
 # Common Questions
 
@@ -76,7 +78,6 @@ Your past runs will be stored in date order. Your most recent runs populate at t
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)  
 
 # Upcoming Features
-* Stopwatch for users
 * Light/Dark modes
 * Sort by pace as well
 
