@@ -80,4 +80,5 @@ Your past runs will be stored in date order. Your most recent runs populate at t
 # Upcoming Features
 * Light/Dark modes
 * Sort by pace as well
+* Mobile first 
 
