@@ -8,7 +8,7 @@ import "./MainPage.css";
 export default function MainPage() {
   const searchOptions = {
     key: process.env.REACT_APP_WEATHER_KEY,
-    api: "http://api.weatherapi.com/v1",
+    api: "https://api.weatherapi.com/v1",
   };
   const [weather, setWeather] = useState([]);
   const [searchString, setSearchString] = useState("");
