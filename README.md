@@ -57,7 +57,7 @@ Your past runs will be stored in date order. Your most recent runs populate at t
   <img src="https://i.imgur.com/soHC8dB.jpeg" width="800" height="185">
     <img src="https://i.imgur.com/LLE8Wcd.jpeg" width="800" height="650">
       <img src="https://i.imgur.com/BERWFfm.jpeg" width="800" height="500">
-        <img src="https://i.imgur.com/Rus50dZ.jpeg" width="600" height="550">
+        <img src="https://i.imgur.com/Rus50dZ.jpeg" width="500" height="550">
             <img src="https://i.imgur.com/GXdBmmK.jpeg" width="800" height="210">
 
 </div>  
